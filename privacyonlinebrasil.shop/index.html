@@ -112,20 +112,7 @@
 
 
    <script>
-  const messages = [
-    '🔥 Alguém acabou de entrar',
-    '💎 Novo conteúdo liberado agora',
-    '👀 3 pessoas estão vendo este perfil',
-    '❤️ Alguém curtiu um conteúdo',
-    '🔓 Acesso premium ativado'
-  ];
-
-  const notify = document.getElementById('notify');
-
-  function showNotification() {
-    const msg = messages[Math.floor(Math.random() * messages.length)];
-    notify.innerText = msg;
-    notify.style.display = 'block';
+ 
 
     setTimeout(() => {
       notify.style.display = 'none';

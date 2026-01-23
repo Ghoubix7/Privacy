@@ -1,3 +1,59 @@
+
+
+
+
+
+
+- links de pagamento
+- Timer de cima
+- notificaçoes da pag de verif
+- notificacoes perfil
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="footer-cta">
       <a class="plan-primary footer-plan" role="button" aria-label="Ver tudo por R$ 9,90" href="https://ambienteseguro.org.ua/c/abfa9ca310">
         <span class="plan-title">Veja tudo por apenas</span>
@@ -5,6 +61,38 @@
       </a>
     </div>  
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -17,3 +105,4 @@ Material que era restrito aos assinantes mais fiéis… agora acessível por tem
 Não perca a chance de ver a Juliana se entregando de verdade.
 👉 Entre agora e garanta o seu antes que volte ao valor original.
 😈 Quantidade limitada • Acesso imediato • 100% sem censura
+

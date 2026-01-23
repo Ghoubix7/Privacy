@@ -6,7 +6,7 @@
 
 - links de pagamento
 - Timer de cima
-- notificaçoes da pag de verif
+- notificaçoes da pag de verif   VVVVV
 - notificacoes perfil
 - 
 
@@ -105,4 +105,5 @@ Material que era restrito aos assinantes mais fiéis… agora acessível por tem
 Não perca a chance de ver a Juliana se entregando de verdade.
 👉 Entre agora e garanta o seu antes que volte ao valor original.
 😈 Quantidade limitada • Acesso imediato • 100% sem censura
+
 

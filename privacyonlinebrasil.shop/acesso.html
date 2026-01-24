@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Acesso Liberado</title>
+
+  <!-- META PIXEL -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1638179917551537');
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 40px;
+      background: #fafafa;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>✅ Pagamento confirmado</h2>
+<p>Seu acesso está sendo liberado...</p>
+
+<script>
+  const planos = {
+    "7dias": {
+      value: 9.90,
+      link: "COLE_AQUI_O_LINK_7_DIAS"
+    },
+    "30dias": {
+      value: 14.90,
+      link: "COLE_AQUI_O_LINK_30_DIAS"
+    },
+    "90dias": {
+      value: 17.90,
+      link: "COLE_AQUI_O_LINK_90_DIAS"
+    },
+    "vitalicio": {
+      value: 22.90,
+      link: "COLE_AQUI_O_LINK_VITALICIO"
+    }
+  };
+
+  const params = new URLSearchParams(window.location.search);
+  const plano = params.get("plano");
+  const acessoKey = "acesso_" + plano;
+
+  if (!plano || !planos[plano]) {
+    document.body.innerHTML = "<h2>❌ Acesso inválido</h2>";
+  }
+  else if (localStorage.getItem(acessoKey)) {
+    document.body.innerHTML = `
+      <h2>⚠️ Acesso já utilizado</h2>
+      <p>Esse link já foi acessado neste dispositivo.</p>
+    `;
+  }
+  else {
+    localStorage.setItem(acessoKey, "true");
+
+    fbq('track', 'Purchase', {
+      value: planos[plano].value,
+      currency: 'BRL'
+    });
+
+    setTimeout(() => {
+      window.location.href = planos[plano].link;
+    }, 2000);
+  }
+</script>
+
+</body>
+</html>

@@ -1467,13 +1467,18 @@ Meu amor… não adianta resistir, eu sei que você quer… e eu tô aqui só pr
             <div class="tag-popular">VEJA TUDO AGORA 🔥</div>
             <span class="mini-badge promo header-promo">Promocional</span>
 
-           <a class="plan-primary" role="button" aria-label="Assinar 7 dias por R$ 9,90"
+          <a class="plan-primary" role="button" aria-label="Assinar 7 dias por R$ 9,90"
    href="https://p.hoopay.com.br/v/7fbcf038-07e5-4f30-a919-763e98795220"
    target="_blank"
-   onclick="fbq('track','InitiateCheckout')">
+   onclick="fbq('track','InitiateCheckout',{
+     content_name: 'Plano 7 Dias',
+     value: 9.90,
+     currency: 'BRL'
+   })">
   <span class="plan-title">7 Dias</span>
   <span class="plan-price">R$ 9,90</span>
 </a>
+
 
             <div class="perk-chip" aria-hidden="false" role="note">NÃO PERCA ESSA OFERTA!</div>
 
@@ -1490,29 +1495,40 @@ Meu amor… não adianta resistir, eu sei que você quer… e eu tô aqui só pr
               </div>
 
 
-               Plano 30 dias
+          
 <a class="plan-outline subscription-link featured" role="button"
    href="https://p.hoopay.com.br/v/71e8c329-3c25-4764-86f6-38184cb2cccd"
    target="_blank"
-   onclick="fbq('track','InitiateCheckout')">
+   onclick="fbq('track','InitiateCheckout',{
+     content_name: 'Plano 30 Dias',
+     value: 14.90,
+     currency: 'BRL'
+   })">
   <span class="left"><span class="plan-label">30 Dias</span> <span class="mini-badge best">Mais popular 🔥</span></span>
   <span class="right">R$ 14,90</span>
 </a>
 
-🔹 Plano 90 dias
+
 <a class="plan-outline subscription-link" role="button"
    href="https://p.hoopay.com.br/v/f6d7fed8-189f-4181-ad3b-764840aa4ddc"
    target="_blank"
-   onclick="fbq('track','InitiateCheckout')">
+   onclick="fbq('track','InitiateCheckout',{
+     content_name: 'Plano 90 Dias',
+     value: 17.90,
+     currency: 'BRL'
+   })">
   <span class="left"><span class="plan-label">90 Dias</span> <span class="mini-badge best">Melhor oferta</span></span>
   <span class="right">R$ 17,90</span>
 </a>
 
-🔹 Plano Vitalício
 <a class="plan-outline subscription-link" role="button"
    href="https://p.hoopay.com.br/v/0ca0224e-46f0-459f-80a6-33e3fa6f4a44"
    target="_blank"
-   onclick="fbq('track','InitiateCheckout')">
+   onclick="fbq('track','InitiateCheckout',{
+     content_name: 'Plano Vitalício',
+     value: 22.90,
+     currency: 'BRL'
+   })">
   <span class="left"><span class="plan-label">Vitalicio</span> <span class="mini-badge premium">Exclusivo</span></span>
   <span class="right">R$ 22,90</span>
 </a>

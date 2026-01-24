@@ -1485,21 +1485,34 @@ Meu amor… não adianta resistir, eu sei que você quer… e eu tô aqui só pr
                 <span class="chevron">⌄</span>
               </div>
 
-              <a class="plan-outline subscription-link featured" role="button" href="https://p.hoopay.com.br/v/71e8c329-3c25-4764-86f6-38184cb2cccd">
-                <span class="left"><span class="plan-label">30 Dias</span> <span class="mini-badge best">Mais popular 🔥</span></span>
-                <span class="right">R$ 14,90</span>
-              </a>
-              
 
-              <a class="plan-outline subscription-link" role="button" href="https://p.hoopay.com.br/v/f6d7fed8-189f-4181-ad3b-764840aa4ddc">
-                <span class="left"><span class="plan-label">90 Dias</span> <span class="mini-badge best">Melhor oferta</span></span>
-                <span class="right">R$ 17,90</span>
-              </a>
+                <a class="plan-outline subscription-link featured" role="button"
+   href="https://p.hoopay.com.br/v/71e8c329-3c25-4764-86f6-38184cb2cccd"
+   onclick="fbq('track','InitiateCheckout')">
+  <span class="left"><span class="plan-label">30 Dias</span> <span class="mini-badge best">Mais popular 🔥</span></span>
+  <span class="right">R$ 14,90</span>
+</a>
 
-              <a class="plan-outline subscription-link" role="button" href="https://p.hoopay.com.br/v/0ca0224e-46f0-459f-80a6-33e3fa6f4a44">
-                <span class="left"><span class="plan-label">Vitalicio</span> <span class="mini-badge premium">Exclusivo</span></span>
-                <span class="right">R$ 22,90</span>
-              </a>
+🔹 Plano 90 dias
+
+<a class="plan-outline subscription-link" role="button"
+   href="https://p.hoopay.com.br/v/f6d7fed8-189f-4181-ad3b-764840aa4ddc"
+   onclick="fbq('track','InitiateCheckout')">
+  <span class="left"><span class="plan-label">90 Dias</span> <span class="mini-badge best">Melhor oferta</span></span>
+  <span class="right">R$ 17,90</span>
+</a>
+
+🔹 Plano Vitalício
+
+<a class="plan-outline subscription-link" role="button"
+   href="https://p.hoopay.com.br/v/0ca0224e-46f0-459f-80a6-33e3fa6f4a44"
+   onclick="fbq('track','InitiateCheckout')">
+  <span class="left"><span class="plan-label">Vitalicio</span> <span class="mini-badge premium">Exclusivo</span></span>
+  <span class="right">R$ 22,90</span>
+</a>
+
+
+                
             </div>
           </div>
 
@@ -2131,6 +2144,35 @@ function tentarEnviarLead() {
   }
 }
 </script>
+
+
+
+
+    
+    <script>
+function iniciarCheckout(url) {
+
+  // evita duplicação
+  if (localStorage.getItem('checkout_iniciado')) {
+    window.open(url, '_blank');
+    return;
+  }
+
+  // dispara evento oficial
+  fbq('track', 'InitiateCheckout');
+
+  // marca como já iniciado
+  localStorage.setItem('checkout_iniciado', 'true');
+
+  console.log('InitiateCheckout enviado');
+
+  // redireciona
+  setTimeout(function () {
+    window.open(url, '_blank');
+  }, 300);
+}
+</script>
+
 
 
 

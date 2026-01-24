@@ -2085,6 +2085,7 @@ Meu amor… não adianta resistir, eu sei que você quer… e eu tô aqui só pr
   
   
   <script>
+      
   window.pixelId = "696414655fae325107e87d5f";
   var a = document.createElement("script");
   a.setAttribute("async", "");
@@ -2092,6 +2093,38 @@ Meu amor… não adianta resistir, eu sei que você quer… e eu tô aqui só pr
   a.setAttribute("src", "../cdn.utmify.com.br/scripts/pixel/pixel.js");
   document.head.appendChild(a);
 </script>
+
+
+
+    
+    <script>
+let tempoMinimo = false;
+let rolouPagina = false;
+let leadEnviado = false;
+
+// Marca 7 segundos na página
+setTimeout(function () {
+  tempoMinimo = true;
+  tentarEnviarLead();
+}, 7000);
+
+// Detecta scroll
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 100) { // 100px já conta como rolar
+    rolouPagina = true;
+    tentarEnviarLead();
+  }
+});
+
+function tentarEnviarLead() {
+  if (tempoMinimo && rolouPagina && !leadEnviado) {
+    fbq('track', 'Lead');
+    leadEnviado = true;
+    console.log('Lead enviado');
+  }
+}
+</script>
+
 
 
 </body>
